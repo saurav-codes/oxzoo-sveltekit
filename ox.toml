@@ -26,4 +26,4 @@ health_url = "http://127.0.0.1:9104/health"
 
 [[domains]]
 name = "sveltekit.oxzoo.sorv.dev"
-tls = false
+tls = true
