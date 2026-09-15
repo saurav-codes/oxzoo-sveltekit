@@ -1,0 +1,29 @@
+name = "oxzoo-sveltekit"
+branch = "main"
+runtime = "node"
+framework = "generic"
+package_manager = "pnpm"
+port = 9104
+environment_file = "/etc/ox/apps/oxzoo-sveltekit.env"
+required_packages = ["nodejs"]
+
+[[apt_sources]]
+name = "nodesource"
+url = "https://deb.nodesource.com/node_22.x"
+suite = "nodistro"
+components = ["main"]
+key_url = "https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key"
+
+[[processes]]
+name = "web"
+command = "node build"
+readiness = "http://127.0.0.1:{port}/health"
+
+[deploy]
+install = ["corepack", "pnpm", "install", "--frozen-lockfile"]
+build = ["corepack", "pnpm", "run", "build"]
+health_url = "http://127.0.0.1:9104/health"
+
+[[domains]]
+name = "sveltekit.oxzoo.sorv.dev"
+tls = false
