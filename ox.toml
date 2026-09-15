@@ -4,7 +4,7 @@ runtime = "node"
 framework = "generic"
 package_manager = "pnpm"
 port = 9104
-environment_file = "/etc/ox/apps/oxzoo-sveltekit.env"
+environment_file = "/etc/ox/projects/oxzoo-sveltekit.env"
 required_packages = ["nodejs"]
 
 [[apt_sources]]
