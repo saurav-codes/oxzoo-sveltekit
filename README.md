@@ -1,6 +1,6 @@
 # oxzoo-sveltekit
 
-A reference SvelteKit app that shows how to deploy an SSR app with [ox](https://github.com/saurav-codes/vpsctl): one Ubuntu VPS, systemd, and nginx, all described by a single `ox.toml` at the repo root. The page proves two kinds of environment variables at once, `GREETING_TAG` read at request time from private runtime env, and `PUBLIC_GREETING_TAG` baked into the client bundle at build time.
+A reference SvelteKit app that shows how to deploy an SSR app with [ox](https://github.com/saurav-codes/ox-dev): one Ubuntu VPS, systemd, and nginx, all described by a single `ox.toml` at the repo root. The page proves two kinds of environment variables at once, `GREETING_TAG` read at request time from private runtime env, and `PUBLIC_GREETING_TAG` baked into the client bundle at build time.
 
 ## Stack
 
@@ -23,7 +23,7 @@ A reference SvelteKit app that shows how to deploy an SSR app with [ox](https://
 
 ## Deploy with ox
 
-1. Create the project in the ox dashboard with this clone URL: `https://github.com/saurav-codes/oxzoo-sveltekit.git`
+1. Create the project in the ox dashboard with this clone URL: `git@github.com:saurav-codes/oxzoo-sveltekit.git`
 2. In the Environment editor, set the runtime env:
    ```ini
    GREETING_TAG=your-tag
